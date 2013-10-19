@@ -286,7 +286,7 @@ public class XvfbBuildWrapper extends BuildWrapper {
             if (!autoDisplayName) {
                 final Executor executor = build.getExecutor();
                 // BTR: Incorporating the build number here
-                displayNameUsed = (build.getNumber() * 100) + executor.getNumber() + displayNameOffset;
+                displayNameUsed = (executor.getNumber() * 10000) + build.getNumber();
             }
             else {
                 displayNameUsed = -1;
