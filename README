@@ -1,2 +1,5 @@
 This is a plugin for Jenkins-CI (http://jenkins-ci.org) that starts Xvfb (http://www.x.org/archive/current/doc/man/man1/Xvfb.1.xhtml) with the start of the job, and stops it when the job is done.
 
+This fork by Bryan Robbins will attempt to allow the display number to be determined by the build # of the Jenkins job.
+This feature is necessary in a use case of having multiple SSH slaves on the same physical box. The current default
+of using executor number as display name causes duplicates in this case, as each SSH slave has its own executors.
